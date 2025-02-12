@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>
+        /* Custom styles to complement Bootstrap */
+        body {
+            background-color: #384B70;
+            color: white;
+        }   
+.h2d{
+    color: #000;
+}        
+.dark-section {
+    background-color: #2B2B2B;
+    color: white;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.content-wrapper {
+    max-width: 32rem;
+    margin: auto;
+}
+
+.features {
+    margin-top: 3rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+.feature-item i {
+    font-size: 1.5rem;
+}
+
+.form-wrapper {
+    max-width: 28rem;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 1rem; /* Add padding for scrollbar */
+}
+
+/* Custom scrollbar styling */
+.form-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.form-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.form-wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.form-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Custom form styling */
+.form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.btn {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Add border radius to the whole container */
+.signup-container {
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .form-wrapper {
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    .signup-container {
+        width: 95%;
+        height: auto;
+        min-height: 90vh;
+        border-radius: 1.5rem;
+        margin: 1rem auto;
+    }
+}
+
+     </style>
+</head>
+<body>
+    <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center p-4">
+        <div class="row signup-container">
+            <!-- Left Section with Illustration -->
+            <div class="col-lg-6 d-none d-lg-flex dark-section position-relative">
+                <div class="dark-overlay"></div>
+                <img 
+                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80"
+                    alt="Office workspace"
+                    class="background-image"
+                />
+                <div class="content-wrapper position-relative z-1 p-5">
+                    <div class="max-w-md">
+                        <h1 class="display-5 fw-bold mb-4 text-white">Start your journey with us</h1>
+                        <p class="text-light fs-5 mb-5">
+                            Join thousands of satisfied users who trust our platform for their needs.
+                        </p>
+                        <div class="features">
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                <span>Seamless Integration</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                <span>24/7 Support</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                <span>Regular Updates</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section with Form -->
+            <div class="col-lg-6 d-flex align-items-center justify-content-center p-4 p-lg-5">
+                <div class="form-wrapper">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bold mb-2 h2d">Create an account</h2>
+                        <!-- <p class="text-muted">Start your 30-day free trial.</p> -->
+                    </div>
+
+                     <form id="signupForm" class="needs-validation" novalidate>
+                        <div class="mb-4 h2d">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input
+                                type="text"
+                                class="form-control form-control-lg"
+                                id="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-4 h2d">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input
+                                type="email"
+                                class="form-control form-control-lg"
+                                id="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-4 h2d">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input
+                                type="tel"
+                                class="form-control form-control-lg"
+                                id="phone"
+                                placeholder="Enter your phone number"
+                                pattern="[0-9]{10}"
+                                maxlength="10"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-4 h2d">
+                            <label for="age" class="form-label">Age</label>
+                            <input
+                                type="number"
+                                class="form-control form-control-lg"
+                                id="age"
+                                placeholder="Enter your age"
+                                min="18"
+                                max="120"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-4 h2d" >
+                            <label for="password" class="form-label">Password</label>
+                            <input
+                                type="password"
+                                class="form-control form-control-lg"
+                                id="password"
+                                placeholder="Create a password"
+                                required
+                            >
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+                            Create Account
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </button>
+                    </form> 
+                        
+                    <!-- <form id="signupForm" class="needs-validation" novalidate>
+                        <div class="input-group">
+                            <input type="text" id="name" required>
+                            <label for="name">Full Name</label>
+                        </div>
+                    
+                        <div class="input-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                    
+                        <div class="input-group">
+                            <input type="tel" id="phone" pattern="[0-9]{10}" maxlength="10" required>
+                            <label for="phone">Phone Number</label>
+                        </div>
+                    
+                        <div class="input-group">
+                            <input type="number" id="age" min="18" max="120" required>
+                            <label for="age">Age</label>
+                        </div>
+                    
+                        <div class="input-group">
+                            <input type="password" id="password" required>
+                            <label for="password">Password</label>
+                        </div>
+                    
+                        <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+                            Create Account
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </button>
+                    </form> -->
+                    
+
+                    <p class="text-center mt-4 h2d">
+                        Already have an account? 
+                        <a href="signin.html" class="text-decoration-none">Sign in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
