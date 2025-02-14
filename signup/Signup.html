@@ -205,7 +205,7 @@
                             >
                         </div>
 
-                        <div class="mb-4 h2d">
+                        <!-- <div class="mb-4 h2d">
                             <label for="phone" class="form-label">Phone Number</label>
                             <input
                                 type="tel"
@@ -216,7 +216,24 @@
                                 maxlength="10"
                                 required
                             >
+                        </div> -->
+
+                        <div class="mb-4 h2d">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: #fff; color: #000; border: 1px solid #ced4da;">+91</span>
+                                <input
+                                    type="tel"
+                                    class="form-control form-control-lg"
+                                    id="phone"
+                                    placeholder="Enter phone number"
+                                    pattern="[0-9]{10}"
+                                    maxlength="10"
+                                    required
+                                >
+                            </div>
                         </div>
+                        
 
                         <div class="mb-4 h2d">
                             <label for="age" class="form-label">Age</label>
