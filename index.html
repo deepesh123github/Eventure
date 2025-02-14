@@ -24,15 +24,15 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <!-- Center the navbar items in mobile view using d-flex justify-content-center -->
                 <ul class="navbar-nav ms-auto d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                    <li class="nav-item me-3"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item me-3"><a class="nav-link active" href="./index.html">Home</a></li>
                     <li class="nav-item me-3"><a class="nav-link" href="./About/aboutus.html">About</a></li>
                     <li class="nav-item me-3"><a class="nav-link" href="#events">Events</a></li>
-                    <li class="nav-item me-3"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item me-3"><a class="nav-link " href="#contact">Contact</a></li>
                 </ul>
             
                 <!-- Get Started Button aligned below Contact link in responsiveness -->
                 <div class="d-flex justify-content-center justify-content-lg-end mt-3 mt-lg-0 ms-lg-3">
-                    <a href="signup/Signup.html" class="btn btn-auth">Get Started</a>
+                    <a href="./signup/Signup.html" class="btn btn-auth">Get Started</a>
                 </div>
             </div>
         </div>
@@ -40,8 +40,8 @@
       <!-- Section-1 -->
       <div class="container p-4">
         <div class="hero row align-items-center flex-column-reverse flex-md-row text-center text-md-start p-3 p-md-5">
-            <div class="hero-text col-md-6 p-3">
-                <h1><span id="text"></span><span class="cursor" id="cursor"></span></h1>
+            <div class="hero-text col-md-6 p-3" >
+                <h1 class="hero-text"><span id="text"></span><span class="cursor" id="cursor"></span></h1>
                 <p>Manage your finances effortlessly with our advanced banking solutions. Safe, fast, and designed for your everyday needs.</p>
                 <div class="hero-buttons">
                     <a href="#" class="btn btn-primary px-4 py-2">Get Started Today</a>
@@ -249,6 +249,22 @@
     <script src="homepg/anime.js"></script>
     <script src="homepg/scroll.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let links = document.querySelectorAll(".nav-link");
+    let currentURL = window.location.href;
+
+    links.forEach(link => {
+        if (link.href === currentURL) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+});
+
+
+    </script>
 </body>
 </html>
 

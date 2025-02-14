@@ -62,3 +62,33 @@ h1, h2, h3 {
     font-size: 1.8rem;  /* Adjust size as needed */
     font-weight: bold; /* Optional: Make it bold */
 }
+
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px; /* Thodi space underline aur text ke beech */
+    color: #333 !important;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: #384B70; /* Underline color */
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hover pe same line pe underline aaye */
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Active page ke liye hamesha underline rahe */
+.nav-link.active::after {
+    width: 100%;
+}
