@@ -11,7 +11,7 @@
    background-size: cover;
    position: relative;
 }
-
+/* 
 nav {
   display: flex;
   padding: 2% 6%;
@@ -53,7 +53,7 @@ nav img {
 
 .nav-links ul li:hover::after{
   width: 100%;
-}
+} */
 
 .text-box{
   width: 90%;
@@ -232,6 +232,7 @@ h3 {
   margin: auto;
   text-align: center;
   padding-top: 100px;
+  margin-top: -100px;
 }
 .facilities-col{
    flex-basis: 31%;

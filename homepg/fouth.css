@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #384B70;
+    --dark-overlay: rgba(56, 75, 112, 0.95);
+    --card-shadow: 0 10px 30px rgba(56, 75, 112, 0.15);
+}
+
+.bg-finance {
+    background: #f8f9fA;
+    min-height: 100vh;
+    position: relative;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    height: 100%;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--primary-color);
+    transition: height 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card:hover::before {
+    height: 100%;
+}
+
+.icon-circle {
+    width: 90px;
+    height: 90px;
+    background: rgba(56, 75, 112, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .icon-circle {
+    transform: scale(1.1);
+}
+
+.icon-circle svg {
+    color: var(--primary-color);
+    width: 45px;
+    height: 45px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .icon-circle svg {
+    transform: rotate(360deg);
+}
+
+.arrow-link {
+    width: 45px;
+    height: 45px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.arrow-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(56, 75, 112, 0.3);
+}
+
+.arrow-link svg {
+    color: #fff;
+    width: 22px;
+    height: 22px;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 1.25rem;
+    margin-bottom: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover .service-title {
+    color: var(--primary-color);
+}
+
+.service-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.header-badge {
+    background: rgba(56, 75, 112, 0.15);
+    color: var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}

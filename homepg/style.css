@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jacquard+12+Charted&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins&family=Roboto+Condensed:wght@600&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 :root{ 
   --body-font1: "Poppins", serif;
   --body-font2:"Roboto Condensed",serif;
@@ -37,9 +38,9 @@ h1 {
     background: rgba(56, 75, 112, 0.9) !important;
 } */
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.3) !important; /* Semi-transparent white */
+    background: rgba(255, 255, 255, 0.3) !important; 
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    -webkit-backdrop-filter: blur(10px); 
     transition: background 0.3s ease-in-out;
 }
 
