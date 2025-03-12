@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/home/style.css">
+    <link rel="stylesheet" href="/assets/css/home/second.css">
+    <link rel="stylesheet" href="/assets/css/Admin/admin.css">
+    <link rel="stylesheet" href="/assets/css/footer/footer.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Eventure</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                    <li class="nav-item me-3"><a class="nav-link" href="/Admin/Admin.html">Admin</a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="/Admin/admin_assets/verfication.html">Verification</a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="/Admin/admin_assets/nuser.html">Users</a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="/Admin/admin_assets/host.html">Host</a></li>
+                </ul>
+                <!--User Profile Dropdown  -->
+                <div class="profile-dropdown ms-lg-3">
+                    <img src="/images/user.jpg" alt="User Icon" class="rounded-circle" width="40" height="40">
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">   
+                            <img src="/images/user.jpg" alt="User">
+                            <div class="user-info">
+                                <h6>Deepesh Sarathe</h6>
+                                <p>Admin</p>
+                            </div>
+                        </div>
+                        <a href="/Admin/admin_assets/editprofile.html" class="dropdown-item"><i class="fas fa-user-edit"></i> Edit Profile </a>
+                        <a href="/User/User/saved.html" class="dropdown-item"><i class="fas fa-user-cog"></i> Status </a>
+                        <a href="#" class="dropdown-item"><i class="fas fa-user-cog"></i> Settings & Privacy </a>
+                        <a href="#" class="dropdown-item"><i class="fas fa-question-circle"></i> Help & Support</a> 
+                        
+                        <div class="dropdown-footer">
+                            <a href="#"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                        </div>
+                    </div>
+                </div> 
+                
+            </div>
+        </div>
+    </nav>
+ <!-- content section  -->
+    <div class="container cont" >
+        <div class="d-flex justify-content-between flex-wrap my-4">
+            <div class="d-flex">
+                <button class="btn btn-dark btn-filter me-2 mb-2">All Events</button>
+                <button class="btn btn-outline-dark btn-filter me-2 mb-2">Nearest Events</button>
+                <button class="btn btn-outline-dark btn-filter mb-2">Latest Event</button>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search events...">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+               
+                <div class="card event-card">
+                    <img src="/images/basketball.png" class="event-img" alt="Event Image">
+                    <div class="card-body event-details">
+                        <span class="badge bg-warning text-dark">Standup Comedy</span>
+                        <a href="#" class="bookmark b-color"><i class="fa-regular fa-bookmark"></i></a>
+                        <h5 class="card-title mt-2">Kedatangan Makhluk Bekasi, Awwe & Pican di Sidang</h5>
+                        <p class="card-text text-muted">To provide flexible, inspiring workspaces that foster creativity, collaboration, and professional growth.</p>
+                        <small><strong>Location:</strong> Podcast Seminggu</small><br>
+                        <small><strong>Date:</strong> Wed, 18 September 2024 at 7-9 PM</small>
+                        <div class="btn-container">
+                            <a href="/Admin/admin_assets/Join.html"><button class="btn btn-dark btn-buy">Join now</button></a>
+                            <a href="/Admin/admin_assets/detail.html" class="see-details ms-3 " target="_blank">View more</a>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div id="footer-container"></div>
+    <script src="../footer/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/home/scroll.js"></script>
+    <script src="/assets/js/Admin/admin.js"></script>
+    <script src="/Admin/load.js"></script>
+    <script src="/assets/js/home/blur.js"></script>
+    <script src="/assets/js/home/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,94 @@
+body {
+    background-color: #f8f9fA;
+    color: #384B70;
+    font-family: var(--body-font1);
+}
+.h2-align{
+    margin-top: 4%;
+}
+.section {
+    padding: 50px 0;
+}
+
+h1, h2, h3 {
+    color: #384B70;
+}
+
+.highlight-text {
+    font-weight: bold;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-box img {
+    width: 40px;
+    height: 40px;
+}
+
+.bdd img {
+    border-radius: 50px;
+    width: 500px;
+    height: auto;
+}
+
+.dbdd img {
+    border-radius: 25px;
+}
+
+.btn-primary {
+    background-color: #384B70 !important;
+    border-color: #384B70 !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background: #2c3e60;
+}
+
+.btn-outline-secondary {
+    border-color: #384B70 !important;
+    color: #384B70 !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #384B70 !important;
+    color: white !important;
+}
+.navbar-brand.lf {
+    font-size: 1.8rem;  /* Adjust size as needed */
+    font-weight: bold; /* Optional: Make it bold */
+}
+
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px; /* Thodi space underline aur text ke beech */
+    color: #333 !important;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: #384B70; /* Underline color */
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hover pe same line pe underline aaye */
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Active page ke liye hamesha underline rahe */
+.nav-link.active::after {
+    width: 100%;
+}

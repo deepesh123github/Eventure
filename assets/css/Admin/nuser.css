@@ -1,0 +1,50 @@
+h2 {
+    margin-bottom: 10px;
+    color: #333;
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 10px;
+    z-index: 10;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    /* margin-bottom: 50px; */
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+tbody tr {
+    background-color: #384B70;
+    color: white;
+}
+
+tr {
+    background-color: #384B70;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 18px;
+        margin-top: 40px;
+    }
+}
+
+.cus-margin{
+    margin-bottom: 25%;
+}
